@@ -1,78 +1,229 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jakub Štrunc - CV</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="style.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <title>SwarmWeb</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="app/Views/styles/navbar.css">
+    <link rel="stylesheet" href="app/Views/styles/timeline.css">
+    <link rel="stylesheet" href="app/Views/styles/sponsors.css">
+    <link rel="stylesheet" href="app/Views/styles/main-page.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
 </head>
-<body>
 
-  <div class="header">
-    <h1>Jakub Štrunc</h1>
-    <p>Student | Software Engineering</p>
-  </div>
+<body id="page-top" data-bs-offset="54" style="background-color: black">
 
-  <div class="container">
-    
-    <section class="section-one m-lg-5">
-        <div class="container">
-          <div class="row align-items-center">
-            <h2 class="section-title">About Me</h2>
-            <div class="col-lg-6 text-left">
-              <p style="font-size: 1.3rem;">
-                I enjoy new challenges, am ambitious, and continually learn new things. During my high school studies in Vancouver, Canada, I led a robotics team for two years, which reached the provincial finals and even the world championship. During my two years at the University of West Bohemia in Plzeň, I gained IT experience ranging from programming in various languages such as C, C#, HTML, CSS, JavaScript, PHP, to working with Git, SQL databases, testing web applications, and creating interactive applications for visualization. I am passionate about programming, enjoy learning new things, and creating new projects; therefore, I am looking for a job opportunity where I can apply and expand my skills while contributing to the development of IT products.
-              </p>
-            </div>
-            <div class="col-lg-6">
-              <img src="images/cv-photo-me.png" class="img-fluid" alt="Jakub Štrunc" style="height: 30vw; width: auto;;">
-            </div>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top navbar-scroll" id="mainNav" style="transition: background-color 1s ease;">
+      <div class="container">
+          <button data-bs-toggle="collapse" data-bs-target="#navbarResponsive" class="navbar-toggler navbar-toggler-right" type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+              <i class="fa fa-bars"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+              <img src="app/Views/images/Logo.png" style="width: auto;height: 10vh;" alt="">
+              <ul class="navbar-nav ms-auto text-uppercase">
+                  <li class="nav-item"><a class="nav-link custom-hover" style="font-size: 1.3rem" href="#about">About</a></li>
+                  <li class="nav-item"><a class="nav-link custom-hover" style="font-size: 1.3rem" href="events.html">Events</a></li>
+                  <li class="nav-item"><a class="nav-link custom-hover" style="font-size: 1.3rem" href="#sponsor">Sponsors</a></li>
+              </ul>
           </div>
-        </div>
+      </div>
+  </nav>
+  
+  
+      
+  
+  <!-- Section: Design Block -->
+  <section>
+      <div  class="bg-image main-img" style="background-image: url('images/team_photo.JPG'); height: 100vh; background-size: cover; background-position: center top 75%; background-repeat: no-repeat">
+          <div class="container d-flex justify-content-start  align-items-center h-100">
+              <div class="row">
+                  <div class="col-md-6 position-relative" style="position: absolute;">
+                      <!-- ✅ Team Name Image (Moved Down 25%) -->
+                      <img src="images/team_name.png"
+                            style="width: 40vw; height: auto;"
+                            alt="Team Name">
+
+                      <!-- ✅ Social Media Buttons -->
+                      <div class="d-flex mt-3 gap-3" style="margin-left: 15%">
+                          <a href="https://www.youtube.com" target="_blank" class="btn-lg rounded-circle d-flex align-items-center justify-content-center social-btn">
+                              <i class="bi-instagram" style="font-size: 2vw;"></i>
+                          </a>
+                          <a href="https://www.youtube.com" target="_blank" class="btn-lg rounded-circle d-flex align-items-center justify-content-center social-btn">
+                              <i class="bi-youtube" style="font-size: 2vw;"></i>
+                          </a>
+
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+
+
+<!-- 
+  
+  <section class="about m-lg-5">
+      <div class="container d-flex">
+          <h1 class="text-warning mb-0 me-2">About our team</h1>
+      </div>
+          <section class="section-one m-lg-5">
+              <div class="container">
+                  <div class="row align-items-center">
+                      <div class="col-lg-6 text-left">
+                          <p class="text-white" style="font-size: 1.3rem"> <?php echo $tplData['about'][0]['text'];?></p>
+                      </div>
+                      <div class="col-lg-6">
+                          <img src="<?php echo $tplData['about'][0]['photo'];?>" class="img-fluid" alt="Image">
+                      </div>
+                  </div>
+              </div>
+          </section>
+  
+          <section class="section-two m-lg-5">
+              <div class="container">
+                  <div class="row align-items-center">
+                      <div class="col-lg-6">
+                          <img src="<?php echo $tplData['about'][1]['photo'];?>" class="img-fluid" alt="Second Image">
+                      </div>
+                      <div class="col-lg-6 text-right">
+                          <p class="text-white" style="font-size: 1.3rem"><?php echo $tplData['about'][1]['text'];?></p>
+                      </div>
+                  </div>
+              </div>
+          </section>
       </section>
+      <section>
+          <div class="d-flex justify-content-center mb-4">
+              <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#addEventModal">
+                  <i class=" bi-plus"></i>
+              </button>
+          </div>
+  
+          <div class="container py-5">
+              <div class="main-timeline-2">
+                  <?php foreach ($tplData['events'] as $index => $event){ ?>
+                      <div class="timeline-2 <?php echo $index % 2 == 0 ? 'right-2' : 'left-2' ;?>" data-aos="fade-up">
+                          <div class="card"" style="background-color: black; border-color: #FFC328">
+                              <img src="<?php echo $event['photo'] ?>" class="card-img-top"
+                                   alt="Responsive image">
+                              <div class="card-body p-4">
+                                  <div class="container d-flex">
+                                      <h4 class="fw-bold mb-4 text-warning"><?php echo $event['name'] ?></h4>
+                                      <button id="edit-paragraphs-btn" name="edit-paragraphs-btn" class="btn btn-link text-warning fw-bold edit-paragraphs-btn" data-bs-toggle="modal" data-bs-target="#editParagraphModal">
+                                          <i class="bi-wrench" style="font-size: 1.1rem"></i>
+                                      </button>
+                                  </div>
+                                  <p class=" text-white mb-4"><i class="far fa-clock" aria-hidden="true"></i> <?php echo $event['date'] ?></p>
+                                  <p class="mb-0 text-white"><?php echo $event['description'] ?></p>
+                              </div>
+                          </div>
+                      </div>
+                  <?php } ?>
+              </div>
+          </div>
+      </section>
+  
+      <section data-aos="fade-up">
+          <h1 class="text-warning" style="padding-bottom: 30px; text-align: center;">Featured Images</h1>
+          <div class="container">
+              <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+  
+                  <!-- ✅ Light Mode Carousel Indicators -->
+                  <div class="carousel-indicators">
+                      <?php foreach ($tplData['photos'] as $index => $photo): ?>
+                          <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="<?php echo $index ?>"
+                                  class="<?php echo $index === 0 ? 'active' : '' ?>"
+                                  aria-label="Slide <?php echo $index + 1 ?>">
+                          </button>
+                      <?php endforeach; ?>
+                  </div>
+  
+                  <!-- ✅ Light Mode Carousel Inner Items -->
+                  <div class="carousel-inner">
+                      <?php foreach ($tplData['photos'] as $index => $photo): ?>
+                          <div class="carousel-item <?php echo $index === 0 ? 'active' : '' ?>" data-bs-interval="<?php echo ($index === 0) ? 10000 : 2000 ?>">
+                              <img src="<?php echo $photo['path'] ?>" class="d-block w-100" alt="Slide <?php echo $index + 1 ?>">
+                          </div>
+                      <?php endforeach; ?>
+                  </div>
+  
+                  <!-- ✅ Previous & Next Controls -->
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                  </button>
+  
+              </div>
+          </div>
+      </section>
+  
+      <section class="sponsors m-lg-5" style="padding: 75px 0" data-aos="fade-up">
+          <div class="container d-flex flex-column align-items-center" style="padding-bottom: 0;">
+              <h1 class="text-warning"  style="padding-bottom: 30px;">Our Sponsors</h1>
+          </div>
+          <div class="container">
+              <div class="row">
+                  <?php foreach ($tplData['sponsors'] as $index => $photo): ?>
+                      <div class="col-lg-3 col-md-6 col-sm-12">
+                          <img src="<?php echo $photo['path']; ?>" class="img-fluid" alt="Sponsor 2">
+                      </div>
+                  <?php endforeach; ?>
+              </div>
+              <div class="container d-flex flex-column align-items-center p-lg-5" style="padding-bottom: 0;">
+                  <p class="text-white" style="font-size: 1.3rem">We are actively looking for sponsors, contact us at
+                      <a href="mailto:random@gmail.com" class="text-warning">random@gmail.com</a>!
+                  </p>
+              </div>
+          </div>
+      </section> -->
 
-    <section>
-      <h2 class="section-title">Education</h2>
-      <ul>
-        <li>University of West Bohemia, Plzeň (2023 - present) - Faculty of Applied Sciences – Software Engineering</li>
-        <li>Heritage Woods Secondary School, Vancouver, British Columbia, Canada (2019-2023) - Graduated high school in Canada</li>
-      </ul>
-    </section>
 
-    <section>
-      <h2 class="section-title">Work Experience</h2>
-      <ul>
-        <li><strong>Robotics Club at High School (2021 – 2023)</strong> - Led two 4-member teams that reached the provincial finals and the world championship.</li>
-        <li><strong>Warehouse Worker – Standard Building Supplies, Vancouver (2022 – 8 weeks)</strong> - Worked at a lumber store: responsible for managing the wood warehouse, sorting products, and maintaining the storage area.</li>
-        <li><strong>Warehouse Worker – Scookum Scaffolding, Vancouver (2021 – 8 weeks)</strong> - Worked in a scaffolding warehouse: assisted the manager with scaffolding deliveries, prepared rentals, and was responsible for warehouse organization.</li>
-        <li><strong>Scout Volunteer (2020 – 2022)</strong> - Led a scout group for children aged 5-7 years.</li>
-      </ul>
-    </section>
 
-    <section class="contact-info">
-      <h2 class="section-title">Contact Information</h2>
-      <ul>
-        <li><strong>Phone Number:</strong> +420 792 645 756</li>
-        <li><strong>Email:</strong> <a href="mailto:jakubstrunc007@gmail.com">jakubstrunc007@gmail.com</a></li>
-      </ul>
-    </section>
 
-    <section class="skills">
-      <h2 class="section-title">Skills and Interests</h2>
-      <h5>Languages</h5>
-      <p>English – fluent</p>
 
-      <h5>Programming</h5>
-      <p>Python, C# – intermediate</p>
-      <p>C, SQL, HTML, CSS, JavaScript, PHP, Git, Docker</p>
 
-      <h5>Hobbies</h5>
-      <p>Sports – snowboarding, swimming, frisbee</p>
-      <p>Cooking and baking</p>
-    </section>
-  </div>
+  
+  <footer class="mb-3">
+    <div class="container">
+        <div class="row justify-content-between align-items-center">
+            <div class="col-md-4 text-start">
+                <span class="copyright text-warning">Copyright&nbsp;© SWARM 2025</span>
+            </div>
+            <div class="col-md-4 text-end">
+                <button type="button" class="btn btn-link text-warning p-0" data-bs-toggle="modal" data-bs-target="#signInModal">
+                    Developed by SWARM TEAM
+                </button>
+            </div>
+        </div>
+    </div>
+</footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="app/JavaScript/navbar.js"></script>
+<script src="app/JavaScript/Admin.js"></script>
+<script src="app/JavaScript/Alert.js"></script>
+<script src="app/JavaScript/Editor.js"></script>
+
+<script>
+    AOS.init({
+        duration: 1000,  // Animation duration in milliseconds
+        offset: 200,     // Offset from the viewport to trigger animation
+        once: true       // Whether animation should happen only once or every time you scroll
+    });
+</script>
 </body>
 </html>
