@@ -1,0 +1,23 @@
+.sponsors .row {
+    display: flex;
+    justify-content: space-between; /* Distributes the images evenly */
+    align-items: center; /* Aligns them vertically */
+}
+
+.sponsors .col-lg-3, .sponsors .col-md-6, .sponsors .col-sm-12 {
+    display: flex;
+    justify-content: center; /* Centers images horizontally within each column */
+    padding: 10px;
+}
+
+.sponsors img {
+    max-width: 100%; /* Ensures images are responsive */
+    height: auto;
+}
+
+/* Adjust for smaller screens */
+@media (max-width: 768px) {
+    .sponsors .row {
+        flex-direction: column; /* Stacks images on top of each other on smaller screens */
+    }
+}

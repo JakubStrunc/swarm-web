@@ -1,0 +1,16 @@
+.social-btn {
+    width: 4vw;  /* Button size */
+    height: 4vw;
+    background-color: #212529; /* Dark gray (Bootstrap's dark color) */
+    color: #FFC107; /* Icon color */
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+.social-btn:hover {
+    background-color: #FFC107 !important; /* Bootstrap warning color */
+    color: black !important; /* Changes icon color */
+}
