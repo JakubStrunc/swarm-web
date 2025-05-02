@@ -26,9 +26,9 @@
           <div class="collapse navbar-collapse" id="navbarResponsive">
               <img src="images/Logo.png" style="width: auto;height: 10vh;" alt="">
               <ul class="navbar-nav ms-auto text-uppercase">
-                  <li class="nav-item"><a class="nav-link custom-hover" style="font-size: 1.3rem" href="#about">About</a></li>
-                  <li class="nav-item"><a class="nav-link custom-hover" style="font-size: 1.3rem" href="events.html">Events</a></li>
-                  <li class="nav-item"><a class="nav-link custom-hover" style="font-size: 1.3rem" href="#sponsor">Sponsors</a></li>
+                  <li class="nav-item"><a class="nav-link" style="font-size: 1.3rem" href="#about"><b>About</b></a></li>
+                  <li class="nav-item"><a class="nav-link" style="font-size: 1.3rem" href="events.html"><b>Events</b></a></li>
+                  <li class="nav-item"><a class="nav-link" style="font-size: 1.3rem" href="#sponsor"><b>Sponsors</b></a></li>
               </ul>
           </div>
       </div>
@@ -152,67 +152,75 @@
     </div>
   </section>
   
-      <section data-aos="fade-up">
-          <h1 class="text-warning" style="padding-bottom: 30px; text-align: center;">Featured Images</h1>
-          <div class="container">
-              <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+  <section data-aos="fade-up">
+    <h1 class="text-warning" style="padding-bottom: 30px; text-align: center;">Featured Images</h1>
+    <div class="container">
+      <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
   
-                  <!-- ✅ Light Mode Carousel Indicators -->
-                  <div class="carousel-indicators">
-                      <?php foreach ($tplData['photos'] as $index => $photo): ?>
-                          <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="<?php echo $index ?>"
-                                  class="<?php echo $index === 0 ? 'active' : '' ?>"
-                                  aria-label="Slide <?php echo $index + 1 ?>">
-                          </button>
-                      <?php endforeach; ?>
-                  </div>
+        <!-- Carousel Indicators -->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
   
-                  <!-- ✅ Light Mode Carousel Inner Items -->
-                  <div class="carousel-inner">
-                      <?php foreach ($tplData['photos'] as $index => $photo): ?>
-                          <div class="carousel-item <?php echo $index === 0 ? 'active' : '' ?>" data-bs-interval="<?php echo ($index === 0) ? 10000 : 2000 ?>">
-                              <img src="<?php echo $photo['path'] ?>" class="d-block w-100" alt="Slide <?php echo $index + 1 ?>">
-                          </div>
-                      <?php endforeach; ?>
-                  </div>
-  
-                  <!-- ✅ Previous & Next Controls -->
-                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Previous</span>
-                  </button>
-                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Next</span>
-                  </button>
-  
-              </div>
+        <!-- Carousel Inner -->
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="10000">
+            <img src="images/teamphoto2.png" class="d-block w-100" alt="Slide 1">
           </div>
-      </section>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="images/teamphoto1.png" class="d-block w-100" alt="Slide 2">
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="images/teamphoto2.png" class="d-block w-100" alt="Slide 3">
+          </div>
+        </div>
   
-      <section class="sponsors m-lg-5" style="padding: 75px 0" data-aos="fade-up">
-          <div class="container d-flex flex-column align-items-center" style="padding-bottom: 0;">
-              <h1 class="text-warning"  style="padding-bottom: 30px;">Our Sponsors</h1>
-          </div>
-          <div class="container">
-              <div class="row">
-                  <?php foreach ($tplData['sponsors'] as $index => $photo): ?>
-                      <div class="col-lg-3 col-md-6 col-sm-12">
-                          <img src="<?php echo $photo['path']; ?>" class="img-fluid" alt="Sponsor 2">
-                      </div>
-                  <?php endforeach; ?>
-              </div>
-              <div class="container d-flex flex-column align-items-center p-lg-5" style="padding-bottom: 0;">
-                  <p class="text-white" style="font-size: 1.3rem">We are actively looking for sponsors, contact us at
-                      <a href="mailto:random@gmail.com" class="text-warning">random@gmail.com</a>!
-                  </p>
-              </div>
-          </div>
-      </section> -->
-
-
-
-
+        <!-- Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+  
+      </div>
+    </div>
+  </section>
+  
+  <section class="sponsors m-lg-5" style="padding: 75px 0" data-aos="fade-up">
+    <div class="container d-flex flex-column align-items-center" style="padding-bottom: 0;">
+      <h1 class="text-warning" style="padding-bottom: 30px;">Our Sponsors</h1>
+    </div>
+  
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+          <img src="images/sponsors/Nav_Canadalogo.png" class="img-fluid" alt="Sponsor 1">
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+          <img src="images/sponsors/Schneiderlogo.png" class="img-fluid" alt="Sponsor 2">
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+          <img src="images/sponsors/EnerSvslogo.png" class="img-fluid" alt="Sponsor 3">
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+          <img src="images/sponsors/Tri-ShoreYachtServiceslogo.png" class="img-fluid" alt="Sponsor 4">
+        </div>
+      </div>
+  
+      <div class="container d-flex flex-column align-items-center p-lg-5" style="padding-bottom: 0;">
+        <p class="text-white" style="font-size: 1.3rem">
+          We are actively looking for sponsors, contact us at
+          <a href="mailto:random@gmail.com" class="text-warning">random@gmail.com</a>!
+        </p>
+      </div>
+    </div>
+  </section>
+  
 
 
   
