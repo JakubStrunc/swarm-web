@@ -1,0 +1,21 @@
+.hex-decoration {
+    position: absolute;
+    z-index: -10;
+    width: 55vh; /* uprav dle potřeby */
+    height: auto;
+    pointer-events: none;
+
+    opacity: 0.7; 
+}
+
+.hex-decoration2 {
+    position: absolute;
+    z-index: -10;
+    width: 65vh; /* uprav dle potřeby */
+    height: auto;
+    pointer-events: none;
+
+    opacity: 0.7; 
+}
+
+
