@@ -2,6 +2,8 @@
 <html lang="en" xmlns="http://www.w3.org/1999/html" style="scroll-behavior: smooth;">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>SwarmWeb</title>
     <link rel="icon" href="images/Logo.png" type="image/png">
 
@@ -18,8 +20,7 @@
 
 
 </head>
-
-<body id="page-top" data-bs-offset="54" style="background-color: black">
+<body id="page-top"  style="background-color: black">
   <!-- Fullscreen Spinner Overlay -->
   <div id="loading-screen">
     <div class="spinner-content text-center">
@@ -34,20 +35,21 @@
 
   <!-- NAVBAR (mobile = offcanvas, desktop = standard) -->
   <nav class="navbar navbar-expand-lg fixed-top navbar-scroll" id="mainNav" style="background-color: transparent; transition: background-color 1s ease;">
-    <div class="container d-flex justify-content-between align-items-center">
+    <div class="container d-flex justify-content-between align-items-center w-100 px-3">
 
-      <!-- Logo -->
+      
       <a class="navbar-brand" href="#">
         <img src="images/Logo.png" alt="Logo" style="height: 10vh;">
       </a>
 
-      <!-- Toggler for mobile -->
-      <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileOffcanvas"
+     
+       
+      <button class="navbar-toggler d-lg-none align-items-centertype="button" data-bs-toggle="offcanvas" data-bs-target="#mobileOffcanvas"
         aria-controls="mobileOffcanvas" aria-label="Toggle navigation">
         <i class="bi bi-list" style="font-size: 2rem; color: white;"></i>
       </button>
 
-      <!-- Collapsible menu -->
+     
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ms-auto text-uppercase">
           <li class="nav-item">
@@ -83,35 +85,59 @@
       </div>
     </div>
   </nav>
+
   
       
   
   <!-- Section: Design Block -->
-  <section>
-      <div  class="bg-image main-img" style="background-image: url('images/team_photo.JPG'); height: 100vh; background-size: cover; background-position: center top 75%; background-repeat: no-repeat">
-          <div class="container d-flex justify-content-start  align-items-center h-100">
-              <div class="row" data-aos="fade-up">
-                  <div class="col-md-6 position-relative" style="position: absolute;">
-                      <!-- ✅ Team Name Image (Moved Down 25%) -->
-                      <img src="images/team_name.png"
-                            style="width: 40vw; height: auto;"
-                            alt="Team Name">
+  <section class="d-none d-lg-block">
+  <div class="bg-image main-img"
+       style="background-image: url('images/team_photo.JPG'); height: 100vh; background-size: cover; background-position: center top 75%; background-repeat: no-repeat;">
+    <div class="container d-flex justify-content-start align-items-center h-100">
+      <div class="row" data-aos="fade-up">
+        <div class="col-md-6 position-relative">
+          <img src="images/team_name.png" style="width: 40vw; height: auto;" alt="Team Name">
 
-                      <!-- ✅ Social Media Buttons -->
-                      <div class="d-flex mt-3 gap-3" style="margin-left: 15%">
-                          <a href="https://www.instagram.com/swarm.robotics/" target="_blank" class="btn-lg rounded-circle d-flex align-items-center justify-content-center social-btn">
-                              <i class="bi-instagram" style="font-size: 2vw;"></i>
-                          </a>
-                          <a href="https://www.youtube.com/@502TheSwarm" target="_blank" class="btn-lg rounded-circle d-flex align-items-center justify-content-center social-btn">
-                              <i class="bi-youtube" style="font-size: 2vw;"></i>
-                          </a>
-
-                      </div>
-                  </div>
-              </div>
+          <div class="d-flex mt-3 gap-3" style="margin-left: 15%">
+            <a href="https://www.instagram.com/swarm.robotics/" target="_blank"
+               class="btn-lg rounded-circle d-flex align-items-center justify-content-center social-btn">
+              <i class="bi-instagram" style="font-size: 2vw;"></i>
+            </a>
+            <a href="https://www.youtube.com/@502TheSwarm" target="_blank"
+               class="btn-lg rounded-circle d-flex align-items-center justify-content-center social-btn">
+              <i class="bi-youtube" style="font-size: 2vw;"></i>
+            </a>
           </div>
+        </div>
       </div>
-  </section>
+    </div>
+  </div>
+</section>
+<section class="hero-section d-block d-lg-none">
+  <div class="hero-overlay d-flex align-items-center" style="min-height: 100vh;">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 d-flex flex-column align-items-center text-center" data-aos="fade-up">
+          <img src="images/team_name.png" alt="Team Name"
+               class="img-fluid mb-3"
+               style="max-width: 320px; width: 80vw;">
+          <div class="d-flex gap-3 justify-content-center">
+            <a href="https://www.instagram.com/swarm.robotics/" target="_blank"
+               class="btn btn-outline-warning rounded-circle d-flex align-items-center justify-content-center social-btn"
+               style="width: 48px; height: 48px;">
+              <i class="bi bi-instagram fs-4"></i>
+            </a>
+            <a href="https://www.youtube.com/@502TheSwarm" target="_blank"
+               class="btn btn-outline-warning rounded-circle d-flex align-items-center justify-content-center social-btn"
+               style="width: 48px; height: 48px;">
+              <i class="bi bi-youtube fs-4"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
   <div style="position: relative;">
     <img src="images/hexagons1.png" class="hex-decoration1" style="top: 0; left: 0;">
@@ -125,7 +151,7 @@
 
     <!-- Section One -->
     <section class="section-one py-4" data-aos="fade-up">
-      <div class="container">
+      <div class="">
         <div class="row align-items-center g-4">
           <div class="col-lg-6">
             <p class="text-white" style="font-size: 1.3rem">
@@ -319,19 +345,21 @@
   
 
   
-  <footer class="mb-3">
-    <div class="container">
-        <div class="row justify-content-between align-items-center">
-            <div class="col-md-4 text-start">
-                <span class="copyright text-warning russo">Copyright&nbsp;© SWARM 2025</span>
-            </div>
-            <div class="col-md-4 text-end">
-                <span class="text-warning p-0 russo">
-                    Developed by SWARM TEAM
-                </span>
-            </div>
-        </div>
+  <footer class="mb-3 mt-5">
+  <div class="container">
+    <div class="row text-center text-md-start">
+      <div class="col-12 col-md-6 mb-2 mb-md-0">
+        <span class="copyright text-warning russo d-block">
+          Copyright © SWARM 2025
+        </span>
+      </div>
+      <div class="col-12 col-md-6 text-md-end">
+        <span class="text-warning russo d-block">
+          Developed by SWARM TEAM
+        </span>
+      </div>
     </div>
+  </div>
 </footer>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -348,5 +376,5 @@
         once: true       // Whether animation should happen only once or every time you scroll
     });
 </script>
-</body>
+</body> 
 </html>

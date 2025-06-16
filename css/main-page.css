@@ -39,4 +39,21 @@
 .russo {
     font-family: 'Russo One', sans-serif;
 }
+
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url('../images/team_photo.jpg'); /* Zde vlož cestu k tvému obrázku */
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+.hero-overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0); /* průhledné pozadí, můžeš změnit */
+}
+
   
