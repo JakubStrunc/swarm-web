@@ -53,3 +53,16 @@ window.addEventListener("load", function () {
       loadingScreen.style.display = "none";
   }
 });
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const offcanvasElement = document.getElementById('mobileOffcanvas');
+    const offcanvas = bootstrap.Offcanvas.getOrCreateInstance(offcanvasElement);
+
+    document.querySelectorAll('#mobileOffcanvas .nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+        offcanvas.hide();
+        });
+    });
+});
