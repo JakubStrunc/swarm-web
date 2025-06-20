@@ -1,5 +1,6 @@
 .hex-decoration1 {
     position: absolute;
+    overflow: hidden;
     z-index: -10;
     width: 55vh; /* uprav dle potřeby */
     height: auto;
@@ -10,6 +11,7 @@
 
 .hex-decoration2 {
     position: absolute;
+    overflow: hidden;
     z-index: -10;
     width: 65vh; /* uprav dle potřeby */
     height: auto;
